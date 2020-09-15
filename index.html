@@ -21,12 +21,14 @@
 <body>
 
   <!-- Start your project here-->  
-  <div style="height: 100vh">
+  <div class="container-fluid">
+   <div style="height: 100vh"></div>
     <div class="flex-center flex-column">
       <!--Main Navigation-->
-<header>
+      <header>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    
       <a class="navbar-brand" href="#"><strong>LOGO</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,78 +41,27 @@
               <li class="nav-item">
                   <a class="nav-link" href="#"><Area>About</Area></a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                   <a class="nav-link" href="#">Products</a>
-              </li>
+              </li>-->
+              <!-- Split button -->
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Retail Packages</a>
+                <a class="dropdown-item" href="#">Wholesale Packages</a>
+              </div>
+            </li> 
           </ul>
-      </div>
-  </nav>
-
-  
-
-</header>
-<!--Main Navigation-->
-
-<!--Main Layout-->
-<main >
-
-  <div class="container my-5 py-5 z-depth-1 text-center text-lg-left">
-
-
-    <!--Section: Content-->
-    <section class="px-md-5 mx-md-5 dark-grey-text">
-
-      <!--Grid row-->
-      <div class="row">
-
-        <!--Grid column-->
-        <div class="col-lg-6 mb-4">
-
-          <img src="" class="img-fluid mb-5"
-            alt="">
-
-          <h3 class="font-weight-bold">Fruit2you</h3>
-
-          <p class="text-muted">Hello, We have been expecting you. Let us bring fresh fruits to you</p>
-
-          <a class="btn btn-dark-green" href="#" role="button">Shop Produce<i class=""></i></a>
-          <a class="btn btn-dark-green" href="#" role="button">Subscribe<i class=""></i></a>
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-6 mb-4">
-
-          <!--Image-->
-          <div class="view overlay z-depth-1-half">
-            <img src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" class="img-fluid"
-              alt="">
-            <a href="#">
-              <div class="mask rgba-white-light"></div>
-            </a>
-          </div>
-
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-
-    </section>
-    <!--Section: Content-->
-
-
+         </div>
+      </nav>
+    </header>
   </div>
-
-</main>
-<!--Main Layout-->
-    </div>
-  </div>
+</div>
   <!-- End your project here-->
   <!-- Footer -->
 <!-- Footer -->
