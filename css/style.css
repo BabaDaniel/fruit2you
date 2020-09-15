@@ -23,12 +23,19 @@ header,
     height: 100%;
 }
 .navbar {
-    background-color: #388E3C;
+    background-color: #184d47;
 }
 
 .nav-link{
     font-family: montserrat;
     font-weight: 500;
+    
+   
+}
+.nav-link a{
+    font-family: montserrat;
+    font-weight: 500;
+    color: #eebb4d;
    
 }
 .navbar-nav .mr-auto{
