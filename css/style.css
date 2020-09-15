@@ -25,3 +25,17 @@ header,
 .navbar {
     background-color: #184d47;
 }
+
+.nav-link{
+    font-family: montserrat;
+   
+}
+.navbar-nav .mr-auto{
+    margin-left: 90px;
+}
+p{
+    font-style: montserrat;
+}
+h6{
+    font-style: Barlow;
+}
