@@ -1,58 +1,45 @@
-.intro-2 {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
-    background-size: cover;
+.nav-link {
+    color: black;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  font-family: "Poppins" !important;
 }
 
-.navbar {
-    background-color: transparent;
+.my-navbar {
+  box-shadow: 0px 10px 30px rgba(216, 216, 216, 0.45);
+  position:#;
+  width: 100%;
 }
 
-.top-nav-collapse {
-    background-color: #4285F4;
+.navbar-brand {
+  font-weight: bold;
+}
+.navbar-brand img {
+  width: 50px;
 }
 
-@media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #4285F4;
-    }
+.nav-link {
+  border-bottom: 4px solid white;
+  margin-right: 24px;
+  transition: 0.3s ease;
+  padding: 5px;
 }
-html,
-body,
-header,
-.view {
-    height: 100%;
+.nav-link:hover {
+  color: black;
+  border-bottom: 4px solid #184d47;
 }
-.navbar {
-    background-color: #184d47;
+.nav-active a {
+  color: black !important;
+  font-weight: 600;
+  border-bottom: 4px solid #184d47;
 }
-
-.nav-link{
-    font-family: montserrat;
-    font-weight: 500;
-    
-   
+.card-img-top{
+    width: 250px;
+    height: 250px;
+    margin-left: 50px;
 }
-.nav-link a{
-    font-family: montserrat;
-    font-weight: 500;
-    color: #eebb4d;
-   
-}
-.navbar-nav .mr-auto{
-    margin-left: 90px;
-}
-p{
-    font-style: montserrat;
-}
-h6{
-    font-style: Barlow;
-}
-.page-footer .font-small .mdb-color .pt-4{
-    background-color: #388E3C;
-}
-@media screen and (min-width: 375px){
-    .page-footer .font-small {
-        margin-top: 35px;
-    
-    }
+.card .testimonial-card{
+    width: 100%;
 }
