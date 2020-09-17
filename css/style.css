@@ -1,7 +1,7 @@
 .nav-link {
     color: black;
 }
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('');
 
 body {
   font-family: "Poppins" !important;
@@ -42,4 +42,7 @@ body {
 }
 .card .testimonial-card{
     width: 100%;
+}
+.btn{
+    background-color: #184D47;
 }
