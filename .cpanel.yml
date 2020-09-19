@@ -1,0 +1,4 @@
+deployement:
+  tasks:
+    - export DEPLOYPATH=/home/cgfarmsg/public_html/
+    - /bin/cp -R * $DEPLOYPATH
