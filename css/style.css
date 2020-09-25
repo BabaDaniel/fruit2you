@@ -16,6 +16,13 @@ body {
   width: 100px;
   
 }
+@media screen and (min-width: 375px){
+
+  .navbar-brand img {
+    width: 100px;
+    
+  }
+}
 /*navbar-brand {
   font-weight: bold;
 }
