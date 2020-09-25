@@ -23,7 +23,7 @@
   <nav class="navbar fixed-top navbar-expand-lg #ffffff white ">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="#" alt="" />
+        <img src="png/fruit2you.png" alt="" />
         Fruit2you</a
       >
       <button
@@ -101,24 +101,30 @@
 
           <p class="lead">
             <span class="mr-1">
-              <del>$200</del>
+              <del>N6,500</del>
             </span>
-            <span>$100</span>
+            <span>N5,500</span>
           </p>
 
           <p class="lead font-weight-bold">Description</p>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa
-            sint voluptatibus!
-            Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
+          <p>Our Oranges are .</p>
 
           <form class="d-flex justify-content-left">
             <!-- Default input -->
-            <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-            <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
-              <i class="fas fa-shopping-cart ml-1"></i>
-            </button>
+            
+            <!--<button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+              <i class="fas fa-shopping-cart ml-1"></i>   </button>---> 
 
+              <!--<input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+              <div class="buy-now-now">
+                <a href="javascript:void(0);" onclick="payWithPaystack()" class="btn btn-custom">Buy online now &nbsp;&nbsp;<i class="fas fa-shopping-bag"></i></a>
+            </div>-->
+            <form>
+              <script src="https://checkout.flutterwave.com/v3.js"></script>
+              <button type="button" onClick="makePayment()" target="_blank">Pay Now</button>
+            </form>
+         
           </form>
 
         </div>
@@ -338,6 +344,41 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript"></script>
-
+  
+  
+  <script>
+    function makePayment() {
+      FlutterwaveCheckout({
+        public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+        tx_ref: "hooli-tx-1920bbtyt",
+        amount: 54600,
+        currency: "NGN",
+        country: "NG",
+        payment_options: "card, mobilemoneyghana, ussd",
+        redirect_url: // specified redirect URL
+          "https://callbacks.piedpiper.com/flutterwave.aspx?ismobile=34",
+        meta: {
+          consumer_id: 23,
+          consumer_mac: "92a3-912ba-1192a",
+        },
+        customer: {
+          email: "user@gmail.com",
+          phone_number: "08102909304",
+          name: "yemi desola",
+        },
+        callback: function (data) {
+          console.log(data);
+        },
+        onclose: function() {
+          // close modal
+        },
+        customizations: {
+          title: "My store",
+          description: "Payment for items in cart",
+          logo: "https://assets.piedpiper.com/logo.png",
+        },
+      });
+    }
+  </script>
 </body>
 </html>
