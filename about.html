@@ -20,10 +20,11 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg #ffffff white ">
-    <div class="container">
+  
+      <nav class="navbar fixed-top navbar-expand-lg #ffffff white ">
+     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="png/fruit2you.png" alt=""/>
+        <img src="png/fruit2you.png" alt="" />
         </a
       >
       <button
@@ -41,15 +42,15 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item nav-active">
-            <a class="nav-link" href="index.html"
+            <a class="nav-link" href="#"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html" style="color: black;">About Us</a>
+            <a class="nav-link" href="#" style="color: black;">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="product-page.html">Shop</a>
+            <a class="nav-link" href="product-page.html" target="_blank">Shop</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -66,129 +67,6 @@
   </nav>
  
   
-<!--Main layout-->
-<main class="mt-5 pt-4">
-  <div class="container dark-grey-text mt-5">
-
-    <!--Grid row-->
-    <div class="row wow fadeIn">
-
-      <!--Grid column-->
-      <div class="col-md-6 mb-4">
-
-        <img src="" class="img-fluid" alt="">
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-md-6 mb-4">
-
-        <!--Content-->
-        <div class="p-4">
-
-          <!--<div class="mb-3">
-            <a href="">
-              <span class="badge purple mr-1">Category 2</span>
-            </a>
-            <a href="">
-              <span class="badge blue mr-1">New</span>
-            </a>
-            <a href="">
-              <span class="badge red mr-1">Bestseller</span>
-            </a>
-          </div>--->
-
-          <p class="lead">
-            <span class="mr-1">
-              <del>N6,500</del>
-            </span>
-            <span>N5,500</span>
-          </p>
-
-          <p class="lead font-weight-bold">Bag of Oranges 25KG</p>
-
-          <p>Brief description about the produce and also details.</p>
-
-          <form class="d-flex justify-content-left">
-            <!-- Default input -->
-            
-            <!--<button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
-              <i class="fas fa-shopping-cart ml-1"></i>   </button>---> 
-
-              <!--<input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <div class="buy-now-now">
-                <a href="javascript:void(0);" onclick="payWithPaystack()" class="btn btn-custom">Buy online now &nbsp;&nbsp;<i class="fas fa-shopping-bag"></i></a>
-            </div>-->
-            <form>
-              <script src="https://checkout.flutterwave.com/v3.js"></script>
-              <button type="button" onClick="makePayment()" target="_blank">Pay Now</button>
-            </form>
-         
-          </form>
-
-        </div>
-        <!--Content-->
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-    <hr>
-
-    <!--Grid row-->
-    <div class="row d-flex justify-content-center wow fadeIn">
-
-      <!--Grid column-->
-      <div class="col-md-6 text-center">
-
-        <h4 class="my-4 h4">Additional information</h4>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
-          voluptates,
-          quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-    <!--Grid row-->
-    <div class="row wow fadeIn">
-
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-12 mb-4">
-
-        <img src="" class="img-fluid" alt="">
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-
-        <img src="" class="img-fluid" alt="">
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-
-        <img src="" class="img-fluid" alt="">
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-  </div>
-</main>
-            
 
 
             
@@ -281,7 +159,7 @@
 
         <!--Copyright-->
         <p class="text-center text-md-left">© 2020 Copyright:
-          <a href="https://Fruit2you.com.ng/">
+          <a href="https://mdbootstrap.com/">
             <strong>Fruit2you.com.ng</strong>
           </a>
         </p>
@@ -344,41 +222,6 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript"></script>
-  
-  
-  <script>
-    function makePayment() {
-      FlutterwaveCheckout({
-        public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
-        tx_ref: "hooli-tx-1920bbtyt",
-        amount: 54600,
-        currency: "NGN",
-        country: "NG",
-        payment_options: "card, mobilemoneyghana, ussd",
-        redirect_url: // specified redirect URL
-          "https://callbacks.piedpiper.com/flutterwave.aspx?ismobile=34",
-        meta: {
-          consumer_id: 23,
-          consumer_mac: "92a3-912ba-1192a",
-        },
-        customer: {
-          email: "user@gmail.com",
-          phone_number: "08102909304",
-          name: "yemi desola",
-        },
-        callback: function (data) {
-          console.log(data);
-        },
-        onclose: function() {
-          // close modal
-        },
-        customizations: {
-          title: "My store",
-          description: "Payment for items in cart",
-          logo: "https://assets.piedpiper.com/logo.png",
-        },
-      });
-    }
-  </script>
+
 </body>
 </html>
