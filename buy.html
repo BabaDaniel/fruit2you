@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Fruit2you</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: #fbfbff;">
+  
+                    <nav class="navbar fixed-top navbar-expand-lg #ffffff white ">
+                  <div class="container">
+                    <a class="navbar-brand" href="#" > 
+                      <img src="png/fruit2you.png" alt="" />
+                      </a
+                    >
+                    <button
+                      class="navbar-toggler border-0"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarNav"
+                      aria-controls="navbarNav"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                    <span class="dark-blue-text"><i
+                      class="fas fa-bars fa-1x"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item nav-active">
+                          <a class="nav-link" href="#" style="color: #184d47; font-weight: 500;"
+                            >Home <span class="sr-only">(current)</span></a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#" style="color:  #184d47; font-weight: 500;" >Our Story</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="color:  #184d47; font-weight: 500;" >Shop</a>
+                          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Retail Packages</a>
+                            <a class="dropdown-item" href="#">Wholesale Packages</a>
+                          
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="login.html" style="color:  #184d47; font-weight: 500;" >Login</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="register.html" style="color:  #184d47; font-weight: 500;" >Register</a>
+                        </li>
+                      </ul>
+                    </div>
+                  
+                </nav>
+              
+                
+
+    <div class="container-fluid" style="background-color: #d6efc7; margin-top:-25px;">
+
+        <main class="mt-5 pt-4">
+            <div class="container dark-grey-text mt-5">
+          
+              <!--Grid row-->
+              <div class="row wow fadeIn">
+          
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+          
+                  <img src="" class="img-fluid" alt="">
+          
+                </div>
+                <!--Grid column-->
+          
+                <!--Grid column-->
+                <div class="col-md-6 mb-4">
+          
+                  <!--Content-->
+                  <div class="p-4">
+          
+                    <!--<div class="mb-3">
+                      <a href="">
+                        <span class="badge purple mr-1">Category 2</span>
+                      </a>
+                      <a href="">
+                        <span class="badge blue mr-1">New</span>
+                      </a>
+                      <a href="">
+                        <span class="badge red mr-1">Bestseller</span>
+                      </a>
+                    </div>--->
+          
+                    <p class="lead">
+                      <span class="mr-1">
+                        <del>N6,500</del>
+                      </span>
+                      <span>N5,500</span>
+                    </p>
+          
+                    <p class="lead font-weight-bold">Bag of Oranges 25KG</p>
+          
+                    <p>Brief description about the produce and also details.</p>
+          
+                    <form class="d-flex justify-content-left">
+                      <!-- Default input -->
+                      
+                      <!--<button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+                        <i class="fas fa-shopping-cart ml-1"></i>   </button>---> 
+          
+                        <!--<input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+                        <div class="buy-now-now">
+                          <a href="javascript:void(0);" onclick="payWithPaystack()" class="btn btn-custom">Buy online now &nbsp;&nbsp;<i class="fas fa-shopping-bag"></i></a>
+                      </div>-->
+                      <form>
+                        <script src="https://checkout.flutterwave.com/v3.js"></script>
+                        <button type="button" onClick="makePayment()" target="_blank">Pay Now</button>
+                      </form>
+                   
+                    </form>
+          
+                  </div>
+                  <!--Content-->
+          
+                </div>
+                <!--Grid column-->
+          
+              </div>
+              <!--Grid row-->
+          
+              <hr>
+          
+              <!--Grid row-->
+              <div class="row d-flex justify-content-center wow fadeIn">
+          
+                <!--Grid column-->
+                <div class="col-md-6 text-center">
+          
+                  <h4 class="my-4 h4">Additional information</h4>
+          
+                  <p>Additional information About the Platform.</p>
+          
+                </div>
+                <!--Grid column-->
+          
+              </div>
+              <!--Grid row-->
+          
+              <!--Grid row-->
+              <div class="row wow fadeIn">
+          
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+          
+                  <img src="" class="img-fluid" alt="">
+          
+                </div>
+                <!--Grid column-->
+          
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+          
+                  <img src="" class="img-fluid" alt="">
+          
+                </div>
+                <!--Grid column-->
+          
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+          
+                  <img src="" class="img-fluid" alt="">
+          
+                </div>
+                <!--Grid column-->
+          
+              </div>
+              <!--Grid row-->
+          
+            </div>
+          </main>
+                      
+          
+          
+                      
+          </div>
+                  
+
+    </div>
+    
+  <!-- Footer -->
+  <footer class="page-footer font-small " style="background-color: #388e3c;">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Footer links -->
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Fruit2you</h6>
+          <p>Fruit2you is an online sales and delivery platform with the sole aim of bringing 
+            fresh fruits directly to  your doorsteps from the farmers in Benue State
+            Offering free delivery services to the residents of Abuja, Federal Capital Territory</p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+          <p>
+            <a href="#!">Oranges</a>
+          </p>
+          <p>
+            <a href="#!">Mangoes</a>
+          </p>
+          <p>
+            <a href="#!">strawberries</a>
+          </p>
+          <p>
+            <a href="#!">Coconuts</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Quick Links</h6>
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+          <p>
+            <a href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="#!">Delivery Days</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fas fa-home mr-3"></i> Abuja, FCT</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@Fruit2you.com.ng</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> +234 902 751 3370</p>
+        
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Footer links -->
+
+      <hr>
+
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+
+          <!--Copyright-->
+          <p class="text-center text-md-left">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/">
+              <strong>Fruit2you.com.ng</strong>
+            </a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+
+    
+    
+
+  </div>
+  <!-- Card deck -->
+    </div>
+  </div>
+<!-- End your project here-->
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+
+</body>
+</html>
