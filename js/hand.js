@@ -66,7 +66,9 @@ function validateRegistration(){
         firebase.auth().onAuthStateChanged(user => {
             if(user) {
                 var db = firebase.firestore();
-                db.collection("users").add({email: email,fName: firstName+" "+lastName,phone: phoneNumber})
+                var name = firstName+" "+lastName;
+                var fullName = name.toUpperCase();
+                db.collection("users").doc(user.uid).set({email: email,fName: fullName,phone: phoneNumber})
                     .then(function(docRef) {
                     //console.log("Document written with ID: ", docRef.id);
                      window.location = 'index.html'; //After successful login, user will be redirected to home.html
