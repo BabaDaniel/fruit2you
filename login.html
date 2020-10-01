@@ -155,7 +155,7 @@
                                     </div>--->
 
                                     <!-- Password -->
-                                    <div class="input-group col-lg-6 mb-4">
+                                    <div class="input-group col-lg-12 mb-4">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                                 <i class="fa fa-lock text-muted"></i>
@@ -164,7 +164,7 @@
                                         <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
                                     </div>
 
-                                    <!-- Password Confirmation -->
+                                    <!-- Password Confirmation
                                     <div class="input-group col-lg-6 mb-4">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-white px-4 border-md border-right-0">
@@ -173,11 +173,12 @@
                                         </div>
                                         <input id="passwordConfirmation" type="text" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md">
                                     </div>
+                                    -->
 
                                     <!-- Submit Button -->
                                     <div class="form-group col-lg-12 mx-auto mb-0">
                                         <a href="#" class="btn btn-dark-green btn-md ml-0 btn-block py-2">
-                                            <span class="font-weight-500">Create your account</span>
+                                            <span class="font-weight-500">Login</span>
                                         </a>
                                     </div>
 
@@ -219,6 +220,30 @@
                 <script type="text/javascript" src="js/mdb.min.js"></script>
                 <!-- Your custom scripts (optional) -->
                 <script type="text/javascript"></script>
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+                <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+                <!-- TODO: Add SDKs for Firebase products that you want to use
+                     https://firebase.google.com/docs/web/setup#available-libraries -->
+                <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+                <script>
+                  // Your web app's Firebase configuration
+                  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                  var firebaseConfig = {
+                    apiKey: "AIzaSyA9wTrPIgsje2cv78zJnfAAwKdEjRc1wic",
+                    authDomain: "fruit2you-9b820.firebaseapp.com",
+                    databaseURL: "https://fruit2you-9b820.firebaseio.com",
+                    projectId: "fruit2you-9b820",
+                    storageBucket: "fruit2you-9b820.appspot.com",
+                    messagingSenderId: "550154660161",
+                    appId: "1:550154660161:web:d2101fb92ca02e818859c0",
+                    measurementId: "G-TSXBP9L8NE"
+                  };
+                  // Initialize Firebase
+                  firebase.initializeApp(firebaseConfig);
+                  firebase.analytics();
+                </script>
 </body>
 
 </html>
