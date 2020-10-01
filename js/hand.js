@@ -57,6 +57,8 @@ function validateRegistration(){
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
+            console.log(errorCode);//don't forget to remove
+            window.alert(errorCode); //don't forget to remove
             var errorMessage = error.message;
             // ...
         });
@@ -78,7 +80,7 @@ function loginUser(){
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
-        console.log(errorCode);
+        //console.log(errorCode);
         if (errorCode="auth/argument-error"){
             window.alert("Please check details and try again.");
             return false;
@@ -89,7 +91,7 @@ function loginUser(){
     
     firebase.auth().onAuthStateChanged(user => {
             if(user) {
-                window.location = 'product-page.html'; //After successful login, user will be redirected to home.html
+                window.location = 'buy.html'; //After successful login, user will be redirected to home.html
             }
         });
 }
