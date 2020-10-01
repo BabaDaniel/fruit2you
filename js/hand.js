@@ -107,6 +107,26 @@ function loginUser(){
         });
 }
 
+function logout(){
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        window.location = 'index.html';
+    }).catch(function(error) {
+        // An error happened.
+        window.alert("please try again");
+    });
+}
+
+
+function checkUserState(){
+    firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                document.getElementById("loginorout").innerHTML="<a href='javascript:logout()'>Logout</a>";
+                document.getElementById("registerorprofile").innerHTML="<a href='profile.html'>Profile</a>";
+            }
+        });
+}
+
 
 
 
