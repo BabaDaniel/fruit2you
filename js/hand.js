@@ -1,8 +1,8 @@
 const landingPage = function(){
     function typeAnimation() {
         Typed.new("#writing-text", {
-            strings: ["Hello, We have been expecting you.Let us deliver fresh fruits to you."],
-            typeSpeed: 3,
+            strings: ["we have been expecting you.Let us deliver fresh fruits to you."],
+            typeSpeed: 9,
             loop: true
         });
     }
