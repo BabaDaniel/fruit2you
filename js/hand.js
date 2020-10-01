@@ -72,6 +72,28 @@ function validateRegistration(){
 }
 
 
+function loginUser(){
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        console.log(errorCode);
+        if (errorCode="auth/argument-error"){
+            window.alert("Please check details and try again.");
+        }
+        var errorMessage = error.message;
+        // ...
+    });
+    
+    firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                window.location = 'product-page.html'; //After successful login, user will be redirected to home.html
+            }
+        });
+}
+
+
 
 
 
