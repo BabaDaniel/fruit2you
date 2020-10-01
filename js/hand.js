@@ -16,14 +16,27 @@ landingPage.typeAnimation();
 
 function validateRegistration(){
     let nameRegex = /^[\\p{L} .'-]+$/
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    const email = document.getElementById("email").value;
+    let phoneRegex = /^[0][7-9][0-1]([0-9]{8})$/
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var email = document.getElementById("email").value;
     
-    if (firstName.length<1){
-        window.alert("Please enter your name");
+    if (nameRegex.test(firstName)==false){
+        window.alert("Please enter your firstname");
+        return false;
     }
+    
+    else if (nameRegex.test(lastName)==false){
+        window.alert("Please enter your lastname");
+        return false;
+    }
+    
+    else if (phoneRegex.test(phoneNumber)==false){
+        window.alert("Please enter your phone number starting with 0");
+        return false;
+    }
+    
 }
 
 
