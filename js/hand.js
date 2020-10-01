@@ -81,6 +81,7 @@ function loginUser(){
         console.log(errorCode);
         if (errorCode="auth/argument-error"){
             window.alert("Please check details and try again.");
+            return false;
         }
         var errorMessage = error.message;
         // ...
