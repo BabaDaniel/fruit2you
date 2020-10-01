@@ -26,12 +26,12 @@ function validateRegistration(){
     var confirmPassword = document.getElementById("passwordConfirmation").value;
     
     if (nameRegex.test(firstName)==false){
-        window.alert("Please enter your firstname");
+        window.alert("Please enter your first name");
         return false;
     }
     
     if (nameRegex.test(lastName)==false){
-        window.alert("Please enter your lastname");
+        window.alert("Please enter your last name");
         return false;
     }
     if (emailRegex.test(email)==false){
