@@ -121,8 +121,8 @@ function logout(){
 function checkUserState(){
     firebase.auth().onAuthStateChanged(user => {
             if(user) {
-                document.getElementById("loginorout").innerHTML="<a href='javascript:logout()'>Logout</a>";
-                document.getElementById("registerorprofile").innerHTML="<a href='profile.html'>Profile</a>";
+                document.getElementById("loginorout").innerHTML="<a style='color: #184d47; font-weight: 500;' href='javascript:logout()'>Logout</a>";
+                document.getElementById("registerorprofile").innerHTML="<a style='color: #184d47; font-weight: 500;' href='profile.html'>Profile</a>";
             }
         });
 }
