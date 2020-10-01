@@ -15,9 +15,10 @@ const landingPage = function(){
 landingPage.typeAnimation();
 
 function validateRegistration(){
-    let nameRegex = /^[\\p{L} .'-]+$/
+    let nameRegex = /^[a-zA-Z ]+$/
     let phoneRegex = /^[0][7-9][0-1]([0-9]{8})$/
     var firstName = document.getElementById("firstName").value;
+    console.log(firstName)
     var lastName = document.getElementById("lastName").value;
     var phoneNumber = document.getElementById("phoneNumber").value;
     var email = document.getElementById("email").value;
@@ -27,12 +28,12 @@ function validateRegistration(){
         return false;
     }
     
-    else if (nameRegex.test(lastName)==false){
+    if (nameRegex.test(lastName)==false){
         window.alert("Please enter your lastname");
         return false;
     }
     
-    else if (phoneRegex.test(phoneNumber)==false){
+    if (phoneRegex.test(phoneNumber)==false){
         window.alert("Please enter your phone number starting with 0");
         return false;
     }
