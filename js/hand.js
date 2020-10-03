@@ -102,7 +102,7 @@ function loginUser(){
     
     firebase.auth().onAuthStateChanged(user => {
             if(user) {
-                window.location = 'buy.html'; //After successful login, user will be redirected to home.html
+                window.location = 'index.html'; //After successful login, user will be redirected to home.html
             }
         });
 }
@@ -123,6 +123,15 @@ function checkUserState(){
             if(user) {
                 document.getElementById("loginorprofile").innerHTML="<a style='color: #184d47; font-weight: 500;' href='profile.html'>Profile</a>";
                 document.getElementById("registerorlogout").innerHTML="<a style='color: #184d47; font-weight: 500;' href='javascript:logout()'>Logout</a>";
+            }
+        });
+}
+
+
+function checkUserStateOnRegisterAndLoginPages(){
+    firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                window.location = 'index.html';
             }
         });
 }
