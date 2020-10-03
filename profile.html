@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Fruit2you</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="checkUserState()" style="background-color: #fbfbff;">
+  
+                    <nav class="navbar fixed-top navbar-expand-lg #ffffff white ">
+                  <div class="container">
+                    <a class="navbar-brand" href="#" > 
+                      <img src="png/fruit2you.png" alt="" />
+                      </a
+                    >
+                    <button
+                      class="navbar-toggler border-0"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarNav"
+                      aria-controls="navbarNav"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                    <span class="dark-blue-text"><i
+                      class="fas fa-bars fa-1x"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item nav-active">
+                          <a class="nav-link" href="index.html" style="color: #184d47; font-weight: 500;"
+                            >Home <span class="sr-only">(current)</span></a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#" style="color:  #184d47; font-weight: 500;" >Our Story</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="buy.html" style="color:  #184d47; font-weight: 500;" >Shop</a>
+                        </li>
+                        <!--<li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="buy.html" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"  style="color:  #184d47; font-weight: 500;">Shop</a>
+                          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Retail Packages</a>
+                            <a class="dropdown-item" href="#">Wholesale Packages</a>
+                          
+                          </div>
+                        </li>-->
+                        <li class="nav-item">
+                          <a id ="loginorprofile" class="nav-link" href="login.html" style="color:  #184d47; font-weight: 500;" >Login</a>
+                        </li>
+                        <li class="nav-item">
+                          <a id="registerorlogout" class="nav-link" href="register.html" style="color:  #184d47; font-weight: 500;" >Register</a>
+                        </li>
+                      </ul>
+                    </div>
+                  
+                </nav>
+              
+                
+
+    <div class="container-fluid" style="background-color: #d6efc7; margin-top:-25px; padding-left: -15px; padding-right: -15px;">
+        <div class="container" style="margin-top: -35px;">
+        
+            <div class="row mt-5 justify-content-between">
+              <div class="col-md-5">
+                  <div class ="errors">
+                          <p id = "firstnameerror" style='color:red;'></p>
+                          <p id = "lastnameerror" style='color:red;'></p>
+                          <p id = "emailerror" style='color:red;'></p>
+                          <p id = "phoneerror" style='color:red;'></p>
+                          <p id = "imgerror" style='color:red;'></p>
+                          <p id = "sqlerror" style='color:red;'></p>
+                  </div>
+              
+              <form action= "profile.php" method="post" enctype="multipart/form-data">
+                  <div class="form-group">
+                      <label for="profileiamge">Click thumbnail to upload profile image</label>
+                      <input type="file" name="profileimage" onchange="displayImage(this)" class="form-control-file" id="profileimage" style="display:none;">
+                      <img src='profileimages/$img_src' onclick='triggerClick()' id='profileDisplay' alt='profile pic' width='200' height='200' style='border-radius:10%'><img src='profileimages/placeholder.png' onclick='triggerClick()' id='profileDisplay' alt='profile pic' width='170' height='190' style='border-radius:50%'>   
+                  </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName"  name="newfirstname" placeholder="John" value="First Name">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName" name="newlastname" placeholder="Doe" value="Last Name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" name="newemail" placeholder="Your Email" value="email">
+                    </div>
+                   
+  
+                    <div class="form-group">
+                      <label for="inputPhone">Phone</label>
+                      <input type="text" class="form-control" id="inputPhone" name="newphone" placeholder="XXX XXXX XXXX" value="phone">
+                    </div>
+                    
+                
+                      
+              
+
+
+        <!--<div class="col-6 col-md-4" style="padding-right: 7%;">
+          
+         <div class="row text-center d-flex justify-content-center" >
+                <div class="col-sm-6">
+                  <div class="view card-img-100 mx-auto mb-4">
+                    <img src="svg/Shipping.svg" class="img-fluid" alt="smaple image">
+                  </div>
+                  <p class="text-muted" style="color: black;">
+                  Fresh Fruit Supply
+                  </p>
+                </div>
+          <div class="col-sm-6">
+                    <div class="view card-img-100 mx-auto mb-4">
+                      <img src="svg/Online Shoping.svg" class="img-fluid" alt="smaple image">
+                    </div>
+                    <p class="text-muted" style="color: black;">
+                  Seamless Checkout
+                    </p>
+                  </div>
+                </div>
+            
+              </div>
+          </div>--->
+      
+      
+  </div>
+      
+</div>
+<!-- Card Light -->
+
+<!-- Card Light -->
+                
+  <!-- Footer -->
+  
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+
+    
+    
+
+  </div>
+  <!-- Card deck -->
+    </div>
+  </div>
+<!-- End your project here-->
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+<script src="js/typed.js/dist/typed.min.js" charset="utf-8"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyA9wTrPIgsje2cv78zJnfAAwKdEjRc1wic",
+    authDomain: "fruit2you-9b820.firebaseapp.com",
+    databaseURL: "https://fruit2you-9b820.firebaseio.com",
+    projectId: "fruit2you-9b820",
+    storageBucket: "fruit2you-9b820.appspot.com",
+    messagingSenderId: "550154660161",
+    appId: "1:550154660161:web:d2101fb92ca02e818859c0",
+    measurementId: "G-TSXBP9L8NE"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  <script type="text/javascript" src="js/hand.js"></script>
+
+
+</body>
+</html>
