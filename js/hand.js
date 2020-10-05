@@ -156,13 +156,14 @@ function getProfileDetails(){
                         document.getElementById("inputLastName").value = nameArray[1];
                         document.getElementById("inputEmail4").value = doc.data().email;
                         document.getElementById("inputPhone").value = doc.data().phone;
-                    } else {
-                        window.location = 'login.html';
-                    }
+                    } 
                 }).catch(function(error) {
                     console.log("Error getting document:", error);
                 });
             }
+        else{
+            window.location = 'login.html';
+        }
         })
     
 
