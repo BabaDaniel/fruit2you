@@ -156,6 +156,7 @@ function getProfileDetails(){
                         document.getElementById("inputLastName").value = nameArray[1];
                         document.getElementById("inputEmail4").value = doc.data().email;
                         document.getElementById("inputPhone").value = doc.data().phone;
+                        //firebase.auth().sendPasswordResetEmail('emuolao@gmail.com');
                     } 
                 }).catch(function(error) {
                     console.log("Error getting document:", error);
