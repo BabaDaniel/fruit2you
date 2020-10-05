@@ -184,15 +184,13 @@ function getProfileDetails(){
 
 
 function resetPassword(){
-    var email = prompt("Please enter registered email to receive password reset link");
-    if (email!=null && email!=""){
-        firebase.auth().sendPasswordResetEmail(email).then(function(){
-            window.alert("email sent successfully to ".email);
-        }).catch(function(error){
-            //check error codes and change
-            window.alert("something went wrong, check email and try again");
-        })
-    }
+    var email = prompt("Please enter registered email to receive password reset link"); 
+    firebase.auth().sendPasswordResetEmail(email).then(function(){
+        window.alert(`email sent successfully to ${email} `);
+    }).catch(function(error){
+        //check error codes and change
+        window.alert("something went wrong, check email and try again");
+    })
 }
 
 
