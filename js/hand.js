@@ -1,3 +1,16 @@
+ var firebaseConfig = {
+    apiKey: "AIzaSyA9wTrPIgsje2cv78zJnfAAwKdEjRc1wic",
+    authDomain: "fruit2you-9b820.firebaseapp.com",
+    databaseURL: "https://fruit2you-9b820.firebaseio.com",
+    projectId: "fruit2you-9b820",
+    storageBucket: "fruit2you-9b820.appspot.com",
+    messagingSenderId: "550154660161",
+    appId: "1:550154660161:web:d2101fb92ca02e818859c0",
+    measurementId: "G-TSXBP9L8NE"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
 const landingPage = function(){
     function typeAnimation() {
         Typed.new("#writing-text", {
