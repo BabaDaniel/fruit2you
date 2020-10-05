@@ -176,7 +176,7 @@ function getProfileDetails(){
                 });
             }
         else{
-            window.location = 'login.html';
+            window.location = 'index.html';
         }
         })
     
