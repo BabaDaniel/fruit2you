@@ -121,9 +121,13 @@ function logout(){
 function checkUserState(){
     firebase.auth().onAuthStateChanged(user => {
             if(user) {
-                document.getElementById("loginorprofile").innerHTML="<a style='color: #184d47; font-weight: 500;' href='profile.html'>Profile</a>";
-                document.getElementById("registerorlogout").innerHTML="<a style='color: #184d47; font-weight: 500;' href='javascript:logout()'>Logout</a>";
+                document.getElementById("loginorprofile").innerHTML="<a class='nav-link' style='color: #184d47; font-weight: 500;' href='profile.html'>Profile</a>";
+                document.getElementById("registerorlogout").innerHTML="<a class='nav-link' style='color: #184d47; font-weight: 500;' href='javascript:logout()'>Logout</a>";
             }
+        else{
+            document.getElementById("loginorprofile").innerHTML ="<a class='nav-link' href='login.html' style='color:  #184d47; font-weight: 500;' >Login</a>";
+            document.getElementById("registerorlogout").innerHTML="<a class='nav-link' style='color: #184d47; font-weight: 500;' href='register.html'>Register</a>";
+        }
         });
 }
 
