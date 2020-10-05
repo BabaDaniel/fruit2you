@@ -169,7 +169,6 @@ function getProfileDetails(){
                         document.getElementById("inputLastName").value = nameArray[1];
                         document.getElementById("inputEmail4").value = doc.data().email;
                         document.getElementById("inputPhone").value = doc.data().phone;
-                        //firebase.auth().sendPasswordResetEmail('emuolao@gmail.com');
                     } 
                 }).catch(function(error) {
                     console.log("Error getting document:", error);
@@ -181,6 +180,18 @@ function getProfileDetails(){
         })
     
 
+}
+
+
+function resetPassword(){
+    var email = prompt("Please enter registered email to receive password reset link");
+    if (email!=null && email!=""){
+        firebase.auth().sendPasswordResetEmail(email).then(function(email){
+            window.alert("email sent successfully to".email);
+        }).catch(function(error){
+            window.alert("something went wrong, please try again later");
+        })
+    }
 }
 
 
