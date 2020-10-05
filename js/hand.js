@@ -186,10 +186,11 @@ function getProfileDetails(){
 function resetPassword(){
     var email = prompt("Please enter registered email to receive password reset link");
     if (email!=null && email!=""){
-        firebase.auth().sendPasswordResetEmail(email).then(function(email){
-            window.alert("email sent successfully to".email);
+        firebase.auth().sendPasswordResetEmail(email).then(function(){
+            window.alert("email sent successfully to ".email);
         }).catch(function(error){
-            window.alert("something went wrong, please try again later");
+            //check error codes and change
+            window.alert("something went wrong, check email and try again");
         })
     }
 }
