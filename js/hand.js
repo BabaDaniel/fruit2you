@@ -142,6 +142,33 @@ function checkUserStateOnRegisterAndLoginPages(){
 
 
 
+function getProfileDetails(){
+    firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                var db = firebase.firestore();
+                var docRef = db.collection("users").doc(user.uid);
+                docRef.get().then(function(doc) {
+                    if (doc.exists) {
+                        //console.log("Document data:", doc.data());
+                        var fullName = doc.data().fName;
+                        var nameArray = fullName.split(" ");
+                        document.getElementById("inputFirstName").value = nameArray[0];
+                        document.getElementById("inputLastName").value = nameArray[1];
+                        document.getElementById("inputEmail4").value = doc.data().email;
+                        document.getElementById("inputPhone").value = doc.data().phone;
+                    } else {
+                        window.location = 'login.html';
+                    }
+                }).catch(function(error) {
+                    console.log("Error getting document:", error);
+                });
+            }
+        })
+    
+
+}
+
+
 
 
 
