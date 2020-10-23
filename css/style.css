@@ -142,3 +142,10 @@ select.form-control {
 .form-control:focus {
   box-shadow: none;
 }
+
+@media screen and (min-width: 375px){
+
+  .col-md-6 .why-corn-highlight{
+    
+  }
+}
